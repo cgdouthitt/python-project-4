@@ -31,7 +31,12 @@ def view_product():
 
 
 def add_product():
-    name = input("Enter product name: ").strip()
+    while True:
+        name = input("Enter product name: ").strip()
+        if name:
+            break
+        else:
+            print("Product name cannot be blank. Please enter a valid name.")
     while True:
         try:
             qty = int(input("Enter product quantity: "))
